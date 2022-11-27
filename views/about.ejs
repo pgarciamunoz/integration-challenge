@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     about page
+    <div>
+        <button type="button" id="btn" onclick="submit('jgh875wdwlv0skue63')">
+            Click here
+        </button>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        function submit(csid) {
+            console.log("testing the button function")
+            let response = cdApi.setCustomerSessionId(csid);
+            console.log("response: ", response);
+        }
+    </script>
     <script src="https://bcdn-4ff4f23f.we-stats.com/scripts/4ff4f23f/4ff4f23f.js"></script>
+
 </body>
+
 </html>
