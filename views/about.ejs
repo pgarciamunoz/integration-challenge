@@ -11,16 +11,24 @@
 <body>
     about page
     <div>
-        <button type="button" id="btn" onclick="submit('jgh875wdwlv0skue63')">
-            Click here
+        <button type="button" id="btn" onclick="setCSID('jgh875wdwlv0skue63')">
+            Set CSID
+        </button>
+        <button type="button" id="btn-2" onclick="changeContext('login')">
+            Change context
         </button>
     </div>
     <script>
         let btn = document.getElementById("btn");
-        function submit(csid) {
-            console.log("testing the button function")
-            let response = cdApi.setCustomerSessionId(csid);
-            console.log("response: ", response);
+        let btn2 = document.getElementById("btn-2");
+        function setCSID(csid) {
+            cdApi.setCustomerSessionId(csid);
+            console.log("cdApi: ", cdApi);
+
+        }
+        function changeContext(context) {
+            cdApi.changeContext(context)
+            // console.log("cdApi: ", cdApi);
         }
     </script>
     <script src="https://bcdn-4ff4f23f.we-stats.com/scripts/4ff4f23f/4ff4f23f.js"></script>
